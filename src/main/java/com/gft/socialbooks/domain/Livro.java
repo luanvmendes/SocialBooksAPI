@@ -18,13 +18,19 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@ApiModel(value = "Livro", description = "Representa um livro")
 @Entity
 public class Livro {
  
+	@ApiModelProperty(value = "ID da cidade", example = "1")
 	@JsonInclude(Include.NON_NULL)
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long id;	
+	@ApiModelProperty( example = "API rest")
 	@NotEmpty(message = "O campo não pode ser vazio")
 	private String nome;
 	@JsonInclude(Include.NON_NULL)

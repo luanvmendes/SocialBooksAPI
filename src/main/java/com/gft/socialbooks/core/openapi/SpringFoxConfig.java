@@ -27,7 +27,8 @@ public class SpringFoxConfig implements WebMvcConfigurer {
 					.paths(PathSelectors.any())
 					.build()
 				.apiInfo(apiInfo())
-				.tags(new Tag("Livros", "Gerenciar Livros"));
+				.tags(new Tag("Livros", "Gerenciar Livros"), 
+						new Tag("Autores", "Gerenciar Autores"));
 	}
 	
 	public ApiInfo apiInfo() {

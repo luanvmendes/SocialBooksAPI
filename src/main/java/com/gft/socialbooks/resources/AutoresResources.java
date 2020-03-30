@@ -19,6 +19,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import com.gft.socialbooks.domain.Autor;
 import com.gft.socialbooks.services.AutoresService;
 
+import io.swagger.annotations.Api;
+
+@Api(tags = "Autores")
 @RestController
 @RequestMapping("/autores")
 public class AutoresResources {
